@@ -1,0 +1,37 @@
+// 创建医生节点
+CREATE (:Doctor {id: 'Dr1', name: '李文华', specialization: '妇科'})
+CREATE (:Doctor {id: 'Dr2', name: '王中丽', specialization: '妇科'})
+CREATE (:Doctor {id: 'Dr3', name: '张建美', specialization: '妇科'})
+
+// 创建疾病节点
+CREATE (:Disease {id: 'D1', name: '白带异常', category: '妇科'})
+CREATE (:Disease {id: 'D2', name: '内分泌失调', category: '妇科'})
+CREATE (:Disease {id: 'D3', name: '月经不规律', category: '妇科'})
+
+// 创建病人节点
+CREATE (:Patient {id: 'P1', name: '赵丽', age: 30})
+CREATE (:Patient {id: 'P2', name: '李雪', age: 35})
+CREATE (:Patient {id: 'P3', name: '夏雪', age: 40})
+
+// 创建治疗关系
+MATCH (p:Patient {id: 'P1'}), (d:Disease {id: 'D1'}), (doc:Doctor {id: 'Dr1'})
+CREATE (p)-[:HAS_DISEASE]->(d)
+CREATE (p)-[:TREATED_BY]->(doc)
+
+MATCH (p:Patient {id: 'P2'}), (d:Disease {id: 'D2'}), (doc:Doctor {id: 'Dr2'})
+CREATE (p)-[:HAS_DISEASE]->(d)
+CREATE (p)-[:TREATED_BY]->(doc)
+
+MATCH (p:Patient {id: 'P3'}), (d:Disease {id: 'D3'}), (doc:Doctor {id: 'Dr3'})
+CREATE (p)-[:HAS_DISEASE]->(d)
+CREATE (p)-[:TREATED_BY]->(doc)
+
+// 创建就诊关系
+MATCH (p:Patient {id: 'P1'}), (doc:Doctor {id: 'Dr1'})
+CREATE (p)-[:VISITED_DOCTOR {date: '2023-06-10'}]->(doc)
+
+MATCH (p:Patient {id: 'P2'}), (doc:Doctor {id: 'Dr2'})
+CREATE (p)-[:VISITED_DOCTOR {date: '2023-06-12'}]->(doc)
+
+MATCH (p:Patient {id: 'P3'}), (doc:Doctor {id: 'Dr3'})
+CREATE (p)-[:VISITED_DOCTOR {date: '2023-06-15'}]->(doc)
