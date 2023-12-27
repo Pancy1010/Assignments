@@ -1,0 +1,2 @@
+2022-11-22-14:31:29CST No suitable driver found for jdbc:sqlite:MyDatabase
+2022-12-04-14:17:36CST [SQLITE_ERROR] SQL error or missing database (near ",": syntax error)
