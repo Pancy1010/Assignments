@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mainback">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:background="@color/white"
+            android:scaleType="fitXY"
+            android:src="@drawable/head" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/back_main"
+                android:layout_width="35dp"
+                android:layout_height="45dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="18dp"
+                android:padding="3dp"
+                android:src="@drawable/finish" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:paddingLeft="10dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="搜索到的结果如下："
+                android:textColor="@color/black"
+                android:textSize="25dp" />
+        </LinearLayout>
+        <ScrollView
+            android:id="@+id/garbagelayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:overScrollMode="never">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <include layout="@layout/news"/>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

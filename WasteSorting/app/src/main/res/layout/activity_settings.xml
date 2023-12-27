@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:background="@color/white"
+            android:scaleType="fitXY"
+            android:src="@drawable/setback" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:orientation="horizontal"
+            android:background="@drawable/setbar_bg">
+
+            <ImageView
+                android:layout_width="67dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                android:layout_gravity="center"
+                android:padding="5dp"
+                android:src="@drawable/username" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="25dp"
+                android:gravity="center_vertical"
+                android:text="当前用户："/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="25dp"
+                android:textColor="#119233"
+                android:gravity="center_vertical"
+                android:id="@+id/username"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:orientation="horizontal"
+            android:background="@drawable/setbar_bg"
+            android:id="@+id/agreement">
+
+            <ImageView
+                android:layout_width="67dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                android:layout_gravity="center"
+                android:padding="5dp"
+                android:src="@drawable/useragreement" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="25dp"
+                android:gravity="center_vertical"
+                android:text="用户协议"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:orientation="horizontal"
+            android:background="@drawable/setbar_bg"
+            android:id="@+id/edition">
+
+            <ImageView
+                android:layout_width="67dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                android:layout_gravity="center"
+                android:padding="5dp"
+                android:src="@drawable/edition" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="25dp"
+                android:gravity="center_vertical"
+                android:text="当前版本"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:orientation="horizontal"
+            android:background="@drawable/setbar_bg"
+            android:id="@+id/evaluate">
+
+            <ImageView
+                android:layout_width="67dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                android:layout_gravity="center"
+                android:padding="5dp"
+                android:src="@drawable/evaluate" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="25dp"
+                android:gravity="center_vertical"
+                android:text="给个好评！"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:orientation="horizontal"
+            android:background="@drawable/setbar_bg"
+            android:id="@+id/ForceOffine">
+
+            <ImageView
+                android:layout_width="67dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                android:layout_gravity="center"
+                android:padding="5dp"
+                android:src="@drawable/offine" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="25dp"
+                android:gravity="center_vertical"
+                android:text="强制下线"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/black"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:paddingTop="5dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:layout_gravity="bottom"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/Main"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:gravity="center_vertical"
+                    android:src="@drawable/home_light" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="首页" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/baike"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/knowledge" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="百科" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/settings"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/settings" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="设置" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
